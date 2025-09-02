@@ -1,12 +1,24 @@
-<div class="row" *ngFor="let prod of ProductsService">
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{prod.title}}</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="row">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex" *ngFor="let prod of products">
+    <div class="card h-100 shadow-sm w-100">
+      <!-- FIXED image size -->
+      <img [src]="prod.imageUrl" class="card-img-top fixed-img" alt="{{prod.title}}">
+
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">NAME: {{prod.title}}</h5>
+        <p class="card-text"><strong>Description: </strong> {{prod.description}}</p>
+        <p class="card-text"><strong>Price: </strong> {{prod.price |currency:'NLE '}}</p>
+        <p class="card-text"><strong>Brand: </strong> {{prod.brand}}</p>
+        <p class="card-text"><strong>Rating: </strong> {{prod.rating |percent}}</p>
+        <p class="card-text" [ngStyle]="{'color': prod.stock > 0 ? 'green' : 'red'}"><strong>Stock: </strong> {{prod.stock}}</p>
+
+        <!-- Button always at the bottom -->
+        <div class="mt-auto">
+          <button class="btn btn-primary w-100" (click)="buyProduct(prod)">
+            Buy Now
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-

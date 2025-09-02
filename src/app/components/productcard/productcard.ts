@@ -9,6 +9,7 @@ import {NgFor} from '@angular/common';
   imports: [
     CommonModule, NgFor
   ],
+  providers:[ProductsService],
   templateUrl: './productcard.html',
   styleUrl: './productcard.css'
 })
@@ -19,5 +20,10 @@ export class Productcard {
     this.products= this.productService.Products
   }
 
-  protected readonly ProductsService = ProductsService;
+buyProduct(product: any) {
+
+  // Example: show alert
+  alert(`You clicked Buy Now for: ${product.title}`);
+}
+
 }

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import {Product} from '../models/product.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  Products: Product[] = [
+  Products: any= [
     {
       id: 1,
       title: "Aero Wireless Headphones",
@@ -14,8 +14,8 @@ export class ProductsService {
       price: 129.99,
       category: "Electronics",
       brand: "Aero",
-      imageUrl: "https://picsum.photos/id/10/800/600",
-      rating: { rate: 4.5, count: 412 },
+      imageUrl: "assets/1.jpg",
+      rating: 4.5,
       stock: 58
     },
     {
@@ -25,8 +25,8 @@ export class ProductsService {
       price: 199.0,
       category: "Electronics",
       brand: "Nova",
-      imageUrl: "https://picsum.photos/id/11/800/600",
-      rating: { rate: 4.2, count: 287 },
+      imageUrl: "assets/2.jpg",
+      rating:4.2, 
       stock: 33
     },
     {
@@ -37,7 +37,7 @@ export class ProductsService {
       category: "Accessories",
       brand: "UrbanCo",
       imageUrl: "https://picsum.photos/id/12/800/600",
-      rating: { rate: 4.6, count: 154 },
+      rating:4.6,
       stock: 72
     },
     {
@@ -48,7 +48,7 @@ export class ProductsService {
       category: "Fashion",
       brand: "Zeit",
       imageUrl: "https://picsum.photos/id/13/800/600",
-      rating: { rate: 4.1, count: 98 },
+      rating: 4.1, 
       stock: 40
     },
     {
@@ -59,7 +59,7 @@ export class ProductsService {
       category: "Home & Kitchen",
       brand: "Chefline",
       imageUrl: "https://picsum.photos/id/14/800/600",
-      rating: { rate: 4.7, count: 221 },
+      rating:  4.7, 
       stock: 120
     },
     {
@@ -70,8 +70,8 @@ export class ProductsService {
       category: "Home & Kitchen",
       brand: "MugWorks",
       imageUrl: "https://picsum.photos/id/15/800/600",
-      rating: { rate: 4.3, count: 65 },
-      stock: 300
+      rating: 4.3, 
+      stock: 0
     },
     {
       id: 7,
@@ -81,7 +81,7 @@ export class ProductsService {
       category: "Sports",
       brand: "TrailPro",
       imageUrl: "https://picsum.photos/id/16/800/600",
-      rating: { rate: 4.4, count: 340 },
+      rating:  4.4, 
       stock: 77
     },
     {
@@ -92,7 +92,7 @@ export class ProductsService {
       category: "Sports",
       brand: "ZenFlex",
       imageUrl: "https://picsum.photos/id/17/800/600",
-      rating: { rate: 4.6, count: 210 },
+      rating:4.6, 
       stock: 150
     },
     {
@@ -103,7 +103,7 @@ export class ProductsService {
       category: "Beauty",
       brand: "Velour",
       imageUrl: "https://picsum.photos/id/18/800/600",
-      rating: { rate: 4.3, count: 190 },
+      rating:  4.3, 
       stock: 95
     },
     {
@@ -114,8 +114,8 @@ export class ProductsService {
       category: "Beauty",
       brand: "GlowLab",
       imageUrl: "https://picsum.photos/id/19/800/600",
-      rating: { rate: 4.5, count: 402 },
-      stock: 210
+      rating:  4.5, 
+      stock: 0
     },
     {
       id: 11,
@@ -125,7 +125,7 @@ export class ProductsService {
       category: "Office",
       brand: "NoteOne",
       imageUrl: "https://picsum.photos/id/20/800/600",
-      rating: { rate: 4.8, count: 133 },
+      rating:4.8, 
       stock: 500
     },
     {
@@ -136,7 +136,7 @@ export class ProductsService {
       category: "Office",
       brand: "Pointer",
       imageUrl: "https://picsum.photos/id/21/800/600",
-      rating: { rate: 4.2, count: 260 },
+      rating:  4.2, 
       stock: 180
     },
     {
@@ -147,7 +147,7 @@ export class ProductsService {
       category: "Accessories",
       brand: "ShieldX",
       imageUrl: "https://picsum.photos/id/22/800/600",
-      rating: { rate: 4.1, count: 88 },
+      rating: 4.1, 
       stock: 240
     },
     {
@@ -158,8 +158,8 @@ export class ProductsService {
       category: "Electronics",
       brand: "SoundBase",
       imageUrl: "https://picsum.photos/id/23/800/600",
-      rating: { rate: 4.0, count: 175 },
-      stock: 64
+      rating:  4.0, 
+      stock: 0
     },
     {
       id: 15,
@@ -169,7 +169,7 @@ export class ProductsService {
       category: "Smart Home",
       brand: "Lumo",
       imageUrl: "https://picsum.photos/id/24/800/600",
-      rating: { rate: 4.4, count: 520 },
+      rating:4.4, 
       stock: 1000
     },
     {
@@ -180,7 +180,7 @@ export class ProductsService {
       category: "Outdoors",
       brand: "Fjord",
       imageUrl: "https://picsum.photos/id/25/800/600",
-      rating: { rate: 4.7, count: 418 },
+      rating:  4.7, 
       stock: 310
     },
     {
@@ -191,8 +191,8 @@ export class ProductsService {
       category: "Home & Living",
       brand: "Luma",
       imageUrl: "https://picsum.photos/id/26/800/600",
-      rating: { rate: 4.3, count: 99 },
-      stock: 120
+      rating: 4.3, 
+      stock: 0
     },
     {
       id: 18,
@@ -202,7 +202,7 @@ export class ProductsService {
       category: "Fashion",
       brand: "PlainCo",
       imageUrl: "https://picsum.photos/id/27/800/600",
-      rating: { rate: 4.5, count: 620 },
+      rating: 4.5, 
       stock: 800
     },
     {
@@ -213,7 +213,7 @@ export class ProductsService {
       category: "Fashion",
       brand: "Vista",
       imageUrl: "https://picsum.photos/id/28/800/600",
-      rating: { rate: 4.2, count: 140 },
+      rating:  4.2,
       stock: 90
     },
     {
@@ -224,7 +224,7 @@ export class ProductsService {
       category: "Electronics",
       brand: "FlashGo",
       imageUrl: "https://picsum.photos/id/29/800/600",
-      rating: { rate: 4.8, count: 990 },
+      rating: 4.8, 
       stock: 55
     },
     {
@@ -235,7 +235,7 @@ export class ProductsService {
       category: "Home & Kitchen",
       brand: "Forge",
       imageUrl: "https://picsum.photos/id/30/800/600",
-      rating: { rate: 4.7, count: 300 },
+      rating: 4.7, 
       stock: 150
     },
     {
@@ -246,7 +246,7 @@ export class ProductsService {
       category: "Electronics",
       brand: "Keylite",
       imageUrl: "https://picsum.photos/id/31/800/600",
-      rating: { rate: 4.4, count: 275 },
+      rating: 4.4, 
       stock: 120
     },
     {
@@ -257,7 +257,7 @@ export class ProductsService {
       category: "Electronics",
       brand: "BeatBox",
       imageUrl: "https://picsum.photos/id/32/800/600",
-      rating: { rate: 4.1, count: 188 },
+      rating: 4.1,
       stock: 260
     },
     {
@@ -268,7 +268,7 @@ export class ProductsService {
       category: "Fashion",
       brand: "Mavro",
       imageUrl: "https://picsum.photos/id/33/800/600",
-      rating: { rate: 4.3, count: 132 },
+      rating:  4.3, 
       stock: 200
     },
     {
@@ -279,7 +279,7 @@ export class ProductsService {
       category: "Electronics",
       brand: "Vocal",
       imageUrl: "https://picsum.photos/id/34/800/600",
-      rating: { rate: 4.5, count: 242 },
+      rating: 4.5, 
       stock: 88
     },
     {
@@ -290,7 +290,7 @@ export class ProductsService {
       category: "Home & Living",
       brand: "Canvasly",
       imageUrl: "https://picsum.photos/id/35/800/600",
-      rating: { rate: 4.2, count: 76 },
+      rating: 4.2, 
       stock: 60
     },
     {
@@ -301,7 +301,7 @@ export class ProductsService {
       category: "Home Appliances",
       brand: "SwiftBoil",
       imageUrl: "https://picsum.photos/id/36/800/600",
-      rating: { rate: 4.1, count: 84 },
+      rating: 4.1, 
       stock: 75
     },
     {
@@ -312,7 +312,7 @@ export class ProductsService {
       category: "Electronics",
       brand: "Magio",
       imageUrl: "https://picsum.photos/id/37/800/600",
-      rating: { rate: 4.0, count: 160 },
+      rating: 4.0, 
       stock: 190
     },
     {
@@ -323,7 +323,7 @@ export class ProductsService {
       category: "Sports",
       brand: "IronFlex",
       imageUrl: "https://picsum.photos/id/38/800/600",
-      rating: { rate: 4.6, count: 205 },
+      rating: 4.6, 
       stock: 38
     },
     {
@@ -334,7 +334,7 @@ export class ProductsService {
       category: "Home & Living",
       brand: "Aura",
       imageUrl: "https://picsum.photos/id/39/800/600",
-      rating: { rate: 4.3, count: 120 },
+      rating:  4.3, 
       stock: 140
     },
     {
@@ -345,7 +345,7 @@ export class ProductsService {
       category: "Outdoors",
       brand: "ClearStream",
       imageUrl: "https://picsum.photos/id/40/800/600",
-      rating: { rate: 4.5, count: 91 },
+      rating: 4.5,
       stock: 66
     },
     {
@@ -356,7 +356,7 @@ export class ProductsService {
       category: "Grocery",
       brand: "RoastLab",
       imageUrl: "https://picsum.photos/id/41/800/600",
-      rating: { rate: 4.8, count: 540 },
+      rating:  4.8, 
       stock: 420
     },
     {
@@ -367,7 +367,7 @@ export class ProductsService {
       category: "Smart Home",
       brand: "Plugly",
       imageUrl: "https://picsum.photos/id/42/800/600",
-      rating: { rate: 4.4, count: 370 },
+      rating: 4.4, 
       stock: 260
     },
     {
@@ -378,7 +378,7 @@ export class ProductsService {
       category: "Toys",
       brand: "BuildIt",
       imageUrl: "https://picsum.photos/id/43/800/600",
-      rating: { rate: 4.7, count: 680 },
+      rating: 4.7, 
       stock: 510
     },
     {
@@ -389,7 +389,7 @@ export class ProductsService {
       category: "Home Appliances",
       brand: "SwiftClean",
       imageUrl: "https://picsum.photos/id/44/800/600",
-      rating: { rate: 4.1, count: 144 },
+      rating:  4.1, 
       stock: 85
     },
     {
@@ -400,7 +400,7 @@ export class ProductsService {
       category: "Photography",
       brand: "SnapStand",
       imageUrl: "https://picsum.photos/id/45/800/600",
-      rating: { rate: 4.2, count: 201 },
+      rating:  4.2, 
       stock: 74
     }
   ];

@@ -1,0 +1,5 @@
+.fixed-img {
+  height: 200px;       /* all images same height */
+  width: 100%;         /* full width */
+  object-fit: cover;   /* crop instead of stretch */
+}

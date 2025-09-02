@@ -7,7 +7,7 @@ export interface Product {
   category: string;
   brand?: string;
   imageUrl: string;       // real image URL
-  rating: { rate: number; count: number };
+  rating?: number;
   stock: number;          // units available
 }
 
