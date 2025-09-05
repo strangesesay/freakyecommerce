@@ -23,7 +23,7 @@ export class Productcard {
 buyProduct(product: any) {
 
   // Example: show alert
-  alert(`You clicked Buy Now for: ${product.title}`);
+  alert(`Tenki For Buy : ${product.title} from FREAKY STORE`);
 }
 
 }

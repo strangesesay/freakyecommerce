@@ -12,6 +12,8 @@
         <p class="card-text"><strong>Rating: </strong> {{prod.rating |percent}}</p>
         <p class="card-text" [ngStyle]="{'color': prod.stock > 0 ? 'green' : 'red'}"><strong>Stock: </strong> {{prod.stock}}</p>
 
+
+        
         <!-- Button always at the bottom -->
         <div class="mt-auto">
           <button class="btn btn-primary w-100" (click)="buyProduct(prod)" [disabled]="prod.stock === 0
